@@ -6,6 +6,7 @@ import {
   IconCoin,
   IconNet,
   IconsTitle,
+  ImageDiv,
   LeftDiv,
   LeftText,
   LeftTitle,
@@ -37,7 +38,7 @@ export default function BannerService() {
         </IconsDiv>
       </LeftDiv>
       <RightDiv>
-
+        <ImageDiv/>
       </RightDiv>
     </ServiceBannerContainer>
   )
