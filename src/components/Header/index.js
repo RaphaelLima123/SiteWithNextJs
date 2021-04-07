@@ -1,40 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
-  MenuContainer,
-  ButtonsDiv,
-  ButtonDiv,
+  NavigationDiv,
+  OptionNav,
   ImageDiv,
-  ButtonToogle,
+  Hamburguer,
   Toogle,
-  HeaderContainer
+  HeaderContainer,
 } from './styles';
-import Image from 'next/image'
+import Image from 'next/image';
 import logo from '../../assets/innovabh.png';
 
 export default function Header() {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
     <HeaderContainer>
-      <MenuContainer>
-      <ImageDiv>
-        <Image
-          src={logo}
-          alt="Logo"
-          width={202}
-          height={70}
-        />
-      </ImageDiv>
-      <ButtonToogle>
+        <ImageDiv>
+          <Image
+            src={logo}
+            alt="Logo"
+            width={202}
+            height={70}
+          />
+        </ImageDiv>
+        <Hamburguer onClick={handleClick}>
           <Toogle/>
           <Toogle/>
           <Toogle/>
-        </ButtonToogle>
-      <ButtonsDiv>
-        <ButtonDiv>Ínicio</ButtonDiv>
-        <ButtonDiv>Sobre nós</ButtonDiv>
-        <ButtonDiv>Serviços</ButtonDiv>
-        <ButtonDiv>Contato</ButtonDiv>
-      </ButtonsDiv>
-    </MenuContainer>
-  </HeaderContainer>
+        </Hamburguer>
+        <NavigationDiv isOpen={isOpen}>
+          <OptionNav>Ínicio</OptionNav>
+          <OptionNav>Sobre nós</OptionNav>
+          <OptionNav>Serviços</OptionNav>
+          <OptionNav>Contato</OptionNav>
+        </NavigationDiv>
+    </HeaderContainer>
   )
 }

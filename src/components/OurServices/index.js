@@ -11,7 +11,7 @@ export default function OurServices() {
   return (
     <ContainerServices>
       <ServicesDiv>
-        {jsonTexts.map((item, key) =>
+        {jsonTexts.map((item, index) =>
         <>
           <ServiceDiv>
             <ServiceTitle>{item.service}</ServiceTitle>

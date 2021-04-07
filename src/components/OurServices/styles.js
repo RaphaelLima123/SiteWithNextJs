@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const ContainerServices = styled.div`
   margin: auto;
+  height: 70vh;
   width: 90%;
   max-width: 980;
 
@@ -13,6 +14,8 @@ export const ServicesDiv = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
+  width: 70%;
+  padding: 2%;
   margin: auto;
 
   @media(max-width: 480) {
@@ -24,6 +27,7 @@ export const ServicesDiv = styled.div`
 export const ServiceDiv = styled.div`
   background: #ff7a00;
   padding: 10px;
+  border-radius: 10px;
 `;
 
 export const ServiceTitle = styled.h1`

@@ -1,63 +1,66 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
-  background-color: #ff7a00;
-`;
-
-export const MenuContainer = styled.div`
-  font-size: 1.3rem;
+  padding: 0.4rem;
   display: flex;
-  width: 90%;
-  max-width: 980;
   justify-content: space-between;
-  margin: auto;
-  height: auto;
   color: #fff;
+  flex-wrap: wrap;
   font-weight: bold;
+  background-color: #202024;
+  font-size: 1.4rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 `;
 
 export const ImageDiv = styled.div`
-  margin: 5px;
-  display: flex;
+`;
+
+// Menu Hamburguer
+export const Hamburguer = styled.div`
   align-items: center;
-`;
-
-export const ButtonsDiv = styled.nav`
-  display: flex;
-  align-items: center;
-
-  @media(max-width: 800px) {
-    display: none;
-  }
-`;
-
-export const ButtonDiv = styled.a`
-  cursor: pointer;
-  padding: 10px 10px 10px 10px;
-  text-align: center;
-  &:hover {
-    color: #f58634;
-  }
-  transition: all ease 0.4s;
-`;
-
-export const ButtonToogle = styled.div`
   @media(max-width: 800px) {
     width: 40px;
-    height: 30px;;
+    height: 30px;
     margin: 20px;
   }
 `;
 
 export const Toogle = styled.div`
-  @media(max-width: 800px) {
     background-color: #fff;
     height: 5px;
     width: 100%;
     margin: 6px auto;
+`;
+
+export const NavigationDiv = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  transition: all ease 0.4s;
+  @media (max-width: 800px) {
+    overflow: hidden;
+    flex-direction: column;
+    width: 100%;
+    max-height: ${({isOpen}) => (isOpen ? "300px": "0px")}
   }
 `;
 
+export const OptionNav = styled.a`
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+ //Animação quando passa o mouse
+  &:hover {
+    border-radius: 10px;
+    background: #d9d9d9;
+  }
+  transition: all ease 0.4s;
+`;
 
 
 

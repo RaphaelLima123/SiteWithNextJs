@@ -43,3 +43,11 @@ export const jsonTexts = [
     "text": `${serviceTextSix}`
   }
 ];
+
+export const TextServiceBanner = {
+  "text1": `A INNOVA BH é uma empresa moderna e atualizada com as necessidades do mercado.`,
+  "text2": `Oferece aos seus clientes assistência jurídica, contábil, administrativa, serviços de cobrança,
+  participação em assembléia, elaboração de ata, acompanhando o síndico em todas as etapas da administração do condomínio.`,
+  "text3": `Os produtos oferecidos são previamente estudados e detalhadamente estruturados para atender as necessidades de seu condomínio,
+  proporcionando assim um serviço personalizado.`
+}
